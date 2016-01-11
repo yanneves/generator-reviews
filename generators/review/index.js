@@ -1,13 +1,13 @@
 'use strict'
-var yeoman = require('yeoman-generator')
+var yeoman = require('yeoman-generator').Base
 var chalk = require('chalk')
 var yosay = require('yosay')
 var _ = require('lodash')
 var moment = require('moment')
 
-module.exports = yeoman.generators.Base.extend({
+module.exports = yeoman.extend({
   constructor: function () {
-    yeoman.generators.Base.apply(this, arguments)
+    yeoman.apply(this, arguments)
     this.argument('name', { type: String, required: true })
     this.name = this.name
     this.option('product')
