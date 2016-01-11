@@ -1,4 +1,4 @@
-# generator-reviews [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-reviews [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 > A very basic generator for producing experience / location reviews for sites like TripAdvisor, as well as product reviews for sites like Amazon
 
 ## Installation
