@@ -1,5 +1,5 @@
 <%- name %>, <%- month %> of <%- year %>
-<%- rating %>
+<%- rating %> "<%- summary %>"
 
 <%- when %>
 

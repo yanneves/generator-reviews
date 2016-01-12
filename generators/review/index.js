@@ -28,6 +28,10 @@ module.exports = yeoman.extend({
       choices: Array.apply(null, new Array(5)).map((x, i) => new Array(i + 2).join('\u2605'))
     }, {
       type: 'input',
+      name: 'summary',
+      message: 'Please provide a one-line summary or title for your review.'
+    }, {
+      type: 'input',
       name: 'when',
       message: `When (and with whom) did you ${this.options.product ? 'purchase' : 'visit'}?`
     }, {
