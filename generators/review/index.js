@@ -65,12 +65,32 @@ module.exports = yeoman.extend({
   },
 
   writing: function () {
-    let timestamp = `${this.props.year}_${_.camelCase(this.props.month)}`
+    let iso = moment(`${this.props.year}-${this.props.month}`, 'YYYY-MMMM')
+    let timestamp = iso.format('YYYY_MMMM').toLowerCase()
     let slug = _.snakeCase(this.name)
+
+    // text template
     this.fs.copyTpl(
       this.templatePath('_{timestamp}-{slug}.txt'),
       this.destinationPath(`${timestamp}-${slug}.txt`),
       _.assign(this.props, { name: this.name })
     )
+
+    // json template
+    this.fs.copyTpl(
+      this.templatePath('_{timestamp}-{slug}.json'),
+      this.destinationPath(`${timestamp}-${slug}.json`),
+      _.assign(this.props, {
+        iso: iso.format(),
+        slug: slug,
+        name: this.name,
+        rating: convertStarRatingToPercent(this.props.rating)
+      })
+    )
+
+    function convertStarRatingToPercent(stars, maximum) {
+      return stars.split('').length / (maximum || 5) * 100 + '%'
+    }
+
   }
 })

@@ -1,0 +1,13 @@
+{
+  "date": "<%- iso %>",
+  "slug": "<%- slug %>",
+  "detail": {
+    "title": "<%- name %>",
+    "rating": "<%- rating %>",
+    "summary": "<%- summary %>",
+    "when": "<%- when %>",
+    "experience": "<%- experience %>",
+    "negatives": "<%- negatives %>",
+    "tips": "<%- tips %>"
+  }
+}
