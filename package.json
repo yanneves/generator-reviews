@@ -1,6 +1,6 @@
 {
   "name": "generator-reviews",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A very basic Yeoman generator for producing written reviews",
   "homepage": "https://github.com/yanneves/generator-reviews",
   "author": {
@@ -17,8 +17,8 @@
   ],
   "dependencies": {
     "chalk": "^1.0.0",
-    "lodash": "^3.10.1",
-    "moment": "^2.11.1",
+    "lodash": "^4.5.0",
+    "moment": "^2.11.2",
     "yeoman-generator": "^0.22.3",
     "yosay": "^1.0.2"
   },
